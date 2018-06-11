@@ -1,0 +1,22 @@
+﻿<control:AyWindow x:Class="TomatoClock.Views._ViewStart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:control="http://www.ayjs.net/controls"    TitleBarHeight="32" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" BorderThickness="0" 
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+      xmlns:controller="clr-namespace:TomatoClock.Controllers"  
+                  MinWidth="800" MinHeight="500" Width="800" Height="500"   Title="AYUI 7.5.1" 
+      xmlns:local="clr-namespace:TomatoClock.Views" WindowStartupLocation="CenterScreen"
+      mc:Ignorable="d" 
+      >
+ 
+
+    <control:AyWindow.DataContext>
+        <controller:ViewStartController />
+    </control:AyWindow.DataContext>
+    <Grid  x:Name="layout"  Background="Transparent" >
+        <Frame Margin="0,0,0,0" Source="/TomatoClock;component/Views/Home/HomeView.xaml" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</control:AyWindow>

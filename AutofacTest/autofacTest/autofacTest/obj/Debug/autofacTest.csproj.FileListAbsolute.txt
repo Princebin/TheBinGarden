@@ -1,0 +1,10 @@
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\bin\Debug\autofacTest.exe.config
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\bin\Debug\autofacTest.exe
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\bin\Debug\autofacTest.pdb
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\bin\Debug\Autofac.dll
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\bin\Debug\Autofac.xml
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\obj\Debug\autofacTest.csprojAssemblyReference.cache
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\obj\Debug\autofacTest.csproj.CoreCompileInputs.cache
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\obj\Debug\autofacTest.csproj.CopyComplete
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\obj\Debug\autofacTest.exe
+C:\Users\Princebin5\source\repos\autofacTest\autofacTest\obj\Debug\autofacTest.pdb

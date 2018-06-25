@@ -119,9 +119,13 @@
   <ItemGroup>
     <Compile Include="App_Start\MESSAGES.cs" />
     <Compile Include="App_Start\SESSIONS.cs" />
+    <Compile Include="Controllers\AlarmController.cs" />
+    <Compile Include="Controllers\AlarmSetingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ViewStartController.cs" />
     <Compile Include="Global.asax.cs" />
+    <Compile Include="Models\AlarmModel.cs" />
+    <Compile Include="Models\AlarmSetingModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\ViewStartModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -138,6 +142,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Views\Alarm\Alarm.xaml.cs">
+      <DependentUpon>Alarm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Alarm\AlarmSeting.xaml.cs">
+      <DependentUpon>AlarmSeting.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
@@ -184,6 +194,14 @@
     <Page Include="DesignSupport.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Alarm\Alarm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Alarm\AlarmSeting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Home\HomeView.xaml">
       <Generator>MSBuild:Compile</Generator>

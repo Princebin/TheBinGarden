@@ -29,6 +29,7 @@ namespace TomatoClock.Views.Alarm
         {
             InitializeComponent();
             AYUI.Message.Register<string>(this, "ChooseRoundrobin", ChooseRoundrobin);
+            string ii=YearSeting.Text;
         }
 
         private void ChooseRoundrobin(string obj)

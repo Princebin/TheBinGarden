@@ -52,7 +52,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="1">
             <Label Content="循环设置：" Width="70"/>
-            <control:AyDateBoxYear x:Name="YearSeting" Width="40" Margin="5,0,0,0"></control:AyDateBoxYear>
+            <control:AyDateBoxYear x:Name="YearSeting" Text="{Binding Model.YearSet}" Width="40" Margin="5,0,0,0"></control:AyDateBoxYear>
             <Label x:Name="YearLab" Content="年"/>
             <control:AyDateBoxMonth x:Name="MonthSeting" Width="40" Margin="5,0,0,0"/>
             <Label x:Name="Monlab" Content="月"/>
@@ -76,12 +76,13 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="2">
             <Label Content="提醒时间：" Width="70"/>
-            <control:AyDateBoxHour Width="80" Margin="5,0,0,0"></control:AyDateBoxHour>
+            <control:AyCalendarTime Width="200"/>
+            <!--<control:AyDateBoxHour Width="80" Margin="5,0,0,0"></control:AyDateBoxHour>
             <Label Content="时"/>
             <control:AyDateBoxMinute Width="80" Margin="5,0,0,0"/>
             <Label Content="分"/>
             <control:AyDateBoxSecond Width="80" Margin="5,0,0,0"/>
-            <Label Content="秒"/>
+            <Label Content="秒"/>-->
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="3">
             <Label Content="提醒声音：" Width="70"/>

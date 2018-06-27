@@ -1,0 +1,7 @@
+C:\Users\Princebin5\source\repos\shejimos\shejimos\bin\Debug\shejimos.exe.config
+C:\Users\Princebin5\source\repos\shejimos\shejimos\bin\Debug\shejimos.exe
+C:\Users\Princebin5\source\repos\shejimos\shejimos\bin\Debug\shejimos.pdb
+C:\Users\Princebin5\source\repos\shejimos\shejimos\obj\Debug\shejimos.csprojAssemblyReference.cache
+C:\Users\Princebin5\source\repos\shejimos\shejimos\obj\Debug\shejimos.csproj.CoreCompileInputs.cache
+C:\Users\Princebin5\source\repos\shejimos\shejimos\obj\Debug\shejimos.exe
+C:\Users\Princebin5\source\repos\shejimos\shejimos\obj\Debug\shejimos.pdb

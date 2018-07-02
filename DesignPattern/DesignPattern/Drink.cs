@@ -24,11 +24,22 @@ namespace DesignPattern
             return null;
         }
     }
-    public class Coffee : Drink
+    public class CoffeePrice : Drink
     {
+        private string _coffeeName;
+        public CoffeePrice(string DrinkName) : base()
+        {
+            _coffeeName = DrinkName;
+        }
+
         public override float Cost()
         {
-            return 10;
+            switch (_coffeeName)
+            {
+                case "拿铁":return 30;
+                case "蓝山":return 35;
+                default: return 50;
+            }
         }
         public override String GetDescription()
         {
@@ -43,6 +54,7 @@ namespace DesignPattern
         {
             this.decoratorDrink = decoratorDrink;
         }
+
         public override float Cost()
         {
             return decoratorDrink.Cost();

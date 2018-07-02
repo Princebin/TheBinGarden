@@ -87,7 +87,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="闹钟">
-                <Grid Background="#C7EDCC"/>
+                <Frame  Source="pack://application:,,,/TomatoClock;component/Views/Alarm/Alarm.xaml"/>
             </TabItem>
         </TabControl>
 

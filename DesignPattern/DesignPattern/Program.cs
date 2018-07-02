@@ -10,8 +10,8 @@ namespace DesignPattern
     {
         static void Main(string[] args)
         {
-            Proxy proxy = new Proxy();
-            proxy.Sell();
+            BeverageStore beverageStore = new BeverageStore();
+            beverageStore.Sell();
             Console.ReadLine();
         }
     }

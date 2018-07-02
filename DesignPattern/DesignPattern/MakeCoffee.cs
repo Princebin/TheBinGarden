@@ -12,11 +12,13 @@ namespace DesignPattern
     {
         private string _beanName;
         private string _temperature;
+        public string _coffeeName;
 
-        public MakeCoffee(string beanName, string temperature)
+        public MakeCoffee(string beanName, string temperature,string coffeeName)
         {
             _beanName = beanName;
             _temperature = temperature;
+            _coffeeName = coffeeName;
         }
 
         public abstract void GrindBean(string BeanName);
@@ -28,39 +30,56 @@ namespace DesignPattern
             Console.WriteLine("温壶");
             Steaming(_temperature);
             Console.WriteLine("冲泡");
-            Console.WriteLine("咖啡泡好了！");
+            Console.WriteLine(_coffeeName + "泡好了！");
         }
+        public abstract Coffee GetResult();
     }
     public class Latte : MakeCoffee
     {
-        public Latte(string beanName, string temperature) : base(beanName, temperature)
+        private Coffee coffee;
+        public Latte(string beanName, string temperature,string coffeeName) : base(beanName, temperature, coffeeName)
         {
+            coffee = new Coffee(coffeeName);
+        }
+
+        public override Coffee GetResult()
+        {
+            return coffee;
         }
 
         public override void GrindBean(string BeanName)
         {
-            Console.WriteLine(BeanName);
+            coffee.AddMaterial(BeanName);
+            Console.WriteLine("研磨" + BeanName);
         }
 
         public override void Steaming(string Temperature)
         {
-            Console.WriteLine("温度" + Temperature);
+            coffee.SetTemperature(Temperature);
+            Console.WriteLine("闷烧" + Temperature);
         }
     }
     public class Lanshan : MakeCoffee
     {
-        public Lanshan(string beanName, string temperature) : base(beanName, temperature)
+        private Coffee coffee;
+        public Lanshan(string beanName, string temperature,string coffeeName) : base(beanName, temperature, coffeeName)
         {
+            coffee = new Coffee(coffeeName);
+        }
+
+        public override Coffee GetResult()
+        {
+            return coffee;
         }
 
         public override void GrindBean(string BeanName)
         {
-            Console.WriteLine(BeanName);
+            coffee.AddMaterial(BeanName);
         }
 
         public override void Steaming(string Temperature)
         {
-            Console.WriteLine("温度" + Temperature);
+            coffee.SetTemperature(Temperature);
         }
     }
 }

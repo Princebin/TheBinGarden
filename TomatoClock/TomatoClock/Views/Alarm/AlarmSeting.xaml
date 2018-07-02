@@ -1,0 +1,117 @@
+﻿<control:AyWindow x:Class="TomatoClock.Views.Alarm.AlarmSeting"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:control="http://www.ayjs.net/controls"    TitleBarHeight="32" 
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" BorderThickness="0" 
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"   
+                  MinWidth="500" MinHeight="400" Width="500" Height="400"   Title="新建闹钟" 
+      xmlns:local="clr-namespace:TomatoClock.Views.Alarm"
+                  xmlns:controller="clr-namespace:TomatoClock.Controllers" WindowStartupLocation="CenterScreen"
+      mc:Ignorable="d" 
+      >
+    <control:AyWindow.DataContext>
+        <controller:AlarmSetingController />
+    </control:AyWindow.DataContext>
+    <Grid  x:Name="layout"  Background="Transparent" GridService.Rows="Auto Auto Auto Auto Auto Auto Auto *">
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="0">
+            <Label Content="循环方式：" Width="70"/>
+            <control:AyRadioList>
+                <RadioButton Content="一次" Margin="10,0,0,0" IsChecked="True" >
+                    <MvcRouteCollection.Routes>
+                        <RouteSetter Action="{Binding Roundrobin}" Event="Checked" Parameter="一次"></RouteSetter>
+                    </MvcRouteCollection.Routes>
+                </RadioButton>
+                <RadioButton Content="每天" Margin="10,0,0,0">
+                    <MvcRouteCollection.Routes>
+                        <RouteSetter Action="{Binding Roundrobin}" Event="Checked" Parameter="每天"></RouteSetter>
+                    </MvcRouteCollection.Routes>
+                </RadioButton>
+                <RadioButton Content="每周" Margin="10,0,0,0">
+                    <MvcRouteCollection.Routes>
+                        <RouteSetter Action="{Binding Roundrobin}" Event="Checked" Parameter="每周"></RouteSetter>
+                    </MvcRouteCollection.Routes>
+                </RadioButton>
+                <RadioButton Content="每月" Margin="10,0,0,0">
+                    <MvcRouteCollection.Routes>
+                        <RouteSetter Action="{Binding Roundrobin}" Event="Checked" Parameter="每月"></RouteSetter>
+                    </MvcRouteCollection.Routes>
+                </RadioButton>
+                <RadioButton Content="每年" Margin="10,0,0,0">
+                    <MvcRouteCollection.Routes>
+                        <RouteSetter Action="{Binding Roundrobin}" Event="Checked" Parameter="每年"></RouteSetter>
+                    </MvcRouteCollection.Routes>
+                </RadioButton>
+                <RadioButton Content="间隔" Margin="10,0,0,0">
+                    <MvcRouteCollection.Routes>
+                        <RouteSetter Action="{Binding Roundrobin}" Event="Checked" Parameter="间隔"></RouteSetter>
+                    </MvcRouteCollection.Routes>
+                </RadioButton>
+            </control:AyRadioList>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="1">
+            <Label Content="循环设置：" Width="70"/>
+            <control:AyDateBoxYear x:Name="YearSeting" SelectedDateTime="{Binding Model.DateTimeSet}" Width="40" Margin="5,0,0,0"></control:AyDateBoxYear>
+            <Label x:Name="YearLab" Content="年"/>
+            <control:AyDateBoxMonth x:Name="MonthSeting" Text="{Binding Model.MonthSet}" Width="40" Margin="5,0,0,0"/>
+            <Label x:Name="Monlab" Content="月"/>
+            <control:AyDateBoxDay x:Name="DaySeting" Text="{Binding Model.DaySet}" Width="40" Margin="5,0,0,0"/>
+            <Label x:Name="Daylab" Content="日"/>
+            <Label x:Name="EveLab" Content="每天" Visibility="Collapsed"/>
+            <CheckBox x:Name="SunSeting" Content="周日" IsChecked="{Binding Model.Sunday}" Visibility="Collapsed"/>
+            <CheckBox x:Name="MonSeting" Content="周一" IsChecked="{Binding Model.Monday}"  Visibility="Collapsed"/>
+            <CheckBox x:Name="TueSeting" Content="周二" IsChecked="{Binding Model.Tuesday}"  Visibility="Collapsed"/>
+            <CheckBox x:Name="WedSeting" Content="周三" IsChecked="{Binding Model.Wednesday}"  Visibility="Collapsed"/>
+            <CheckBox x:Name="ThuSeting" Content="周四" IsChecked="{Binding Model.Thursday}"  Visibility="Collapsed"/>
+            <CheckBox x:Name="FriSeting" Content="周五" IsChecked="{Binding Model.Friday}" Visibility="Collapsed"/>
+            <CheckBox x:Name="SatSeting" Content="周六" IsChecked="{Binding Model.Saturday}" Visibility="Collapsed"/>
+            <control:AyDateBoxHour x:Name="HourSeting" Text="{Binding Model.HourSet}" Width="40" Margin="5,0,0,0" Visibility="Collapsed"></control:AyDateBoxHour>
+            <Label x:Name="HourLab" Content="时" Visibility="Collapsed"/>
+            <control:AyDateBoxMinute x:Name="MinuteSeting" Text="{Binding Model.MinuteSet}" Width="40" Margin="5,0,0,0" Visibility="Collapsed"/>
+            <Label x:Name="Minutelab" Content="分" Visibility="Collapsed"/>
+            <control:AyDateBoxSecond x:Name="SecondSeting" Text="{Binding Model.SecSet}" Width="40" Margin="5,0,0,0" Visibility="Collapsed"/>
+            <Label x:Name="SecLab" Content="秒" Visibility="Collapsed"/>
+            <Label x:Name="AlerLab" Content="提醒一次" Margin="5,0,0,0" Visibility="Collapsed"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="2">
+            <Label Content="提醒时间：" Width="70"/>
+            <control:AyDateBoxHour Text="{Binding Model.HourWarn}" Width="80" Margin="5,0,0,0"></control:AyDateBoxHour>
+            <Label Content="时"/>
+            <control:AyDateBoxMinute Text="{Binding Model.MinuteWarn}" Width="80" Margin="5,0,0,0"/>
+            <Label Content="分"/>
+            <control:AyDateBoxSecond Text="{Binding Model.SecWarn}" Width="80" Margin="5,0,0,0"/>
+            <Label Content="秒"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="3">
+            <Label Content="提醒声音：" Width="70"/>
+            <control:AyComboBox Width="80" Margin="5,0,0,0"/>
+            <control:AyButton Content="试听" Margin="5,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="4">
+            <control:AyRadioList Margin="75,0,0,0">
+                <RadioButton Content="不间断" Margin="5,0,0,0"></RadioButton>
+                <RadioButton Content="响一次" Margin="5,0,0,0"></RadioButton>
+                <RadioButton Content="静音" Margin="5,0,0,0"></RadioButton>
+                <RadioButton Content="自定义" Margin="5,0,0,0"></RadioButton>
+            </control:AyRadioList>
+            <control:AyDateBoxMinute Width="60" Margin="5,0,0,0"/>
+            <Label Content="分钟"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="5">
+            <Label Content="任务标签：" Width="70"/>
+            <control:AyTextBox Text="{Binding Model.TaskLab}" Width="400"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="6">
+            <Label Content="选择分组：" Width="70"/>
+            <control:AyComboBox ItemsSource="{Binding Model.DropDownOptions}" SelectedItem="{Binding Model.DropDownOption}" DisplayMemberPath="Text" SelectedValuePath="Key" SelectedIndex="0" Width="90" Margin="5,0,0,0"/>
+            <control:AyButton Content="应用" Width="60" Margin="50,0,0,0">
+                <MvcRouteCollection.Routes>
+                    <RouteSetter Action="{Binding ApplicationAction}" Event="Click"></RouteSetter>
+                </MvcRouteCollection.Routes>
+            </control:AyButton>
+            <control:AyButton Content="保存" Width="60" Margin="5,0,0,0"/>
+            <control:AyButton Content="取消" Width="60" Margin="5,0,0,0" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</control:AyWindow>

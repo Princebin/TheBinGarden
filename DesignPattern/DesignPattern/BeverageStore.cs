@@ -15,11 +15,12 @@ namespace DesignPattern
         public BeverageStore()
         {
             proxy = new Proxy();
+            proxy.Day = "Sunday";
+            proxy.Display();
         }
         
         public void Sell()
-        {
-            
+        {  
             proxy.Sell("拿铁");
         }
     }

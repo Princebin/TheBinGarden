@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPattern.State;
+using System;
 
 namespace DesignPattern
 {
@@ -12,7 +13,7 @@ namespace DesignPattern
         void Notify();
         string SubjectSate { get; set; }
     }
-    abstract class Salesman
+    public abstract class Salesman
     {
         public abstract void Sell(string coffeeName);
     }
@@ -53,10 +54,21 @@ namespace DesignPattern
             //Console.WriteLine(lanshandrink.GetDescription() + ":" + lanshandrink.Cost());
         }
     }
-    class Proxy : Salesman
+    public class Proxy : Salesman
     {
         Boss boss;
         Chief chief;
+        string day;
+        State.State current;
+        string person;
+
+       public Proxy()
+        {
+            current = new SundayState();
+        }
+
+        public string Day { get => day; set => day = value; }
+
         public override void Sell(string coffeeName)
         {
             if (boss == null)
@@ -68,6 +80,14 @@ namespace DesignPattern
                 boss.Notify();
             }
             boss.Sell(coffeeName);
+        }
+        public void SetState(State.State s)
+        {
+            current = s;
+        }
+        public void Display()
+        {
+           current.Display(this);
         }
     }
 }

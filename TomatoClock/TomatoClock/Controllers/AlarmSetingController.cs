@@ -567,7 +567,7 @@ namespace TomatoClock.Controllers
             }
             alarm.Time = Model.HourWarn + ":" + Model.MinuteWarn + ":" + Model.SecWarn;
             alarm.Task = Model.TaskLab;
-            DateTime ii= Model.DateTimeSet;
+            DateTime? ii = Model.DateTimeSet;
             AYUI.Message.Send<Alarm>(alarm, "AddAlarm");
         }
 

@@ -7,7 +7,8 @@ namespace TomatoClock.Models
 {
     public class AlarmSetingModel : Model
     {
-        private DateTime _dateTimeSet;
+        private Nullable<DateTime> myDateTimeProperty = null;
+        private DateTime? _dateTimeSet;
         private int _yearSet;
         private int _monthSet;
         private int _daySet;
@@ -29,7 +30,7 @@ namespace TomatoClock.Models
         private DropDownOption _dropDownOption;
         public AlarmSetingModel()
         {
-            DateTimeSet = DateTime.Now;
+            //DateTimeSet = DateTime.Now;
             YearSet = DateTime.Now.Year;
             MonthSet = DateTime.Now.Month;
             DaySet = DateTime.Now.Day;
@@ -212,12 +213,21 @@ namespace TomatoClock.Models
             }
         }
 
-        public DateTime DateTimeSet
+        public DateTime? DateTimeSet
         {
             get => _dateTimeSet;
             set
             {
                 Set(ref _dateTimeSet, value);
+            }
+        }
+
+        public DateTime? MyDateTimeProperty
+        {
+            get => myDateTimeProperty;
+            set
+            {
+                Set(ref myDateTimeProperty, value);
             }
         }
     }

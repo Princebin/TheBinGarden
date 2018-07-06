@@ -52,7 +52,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="10,10,10,10" Grid.Row="1">
             <Label Content="循环设置：" Width="70"/>
-            <control:AyDateBoxYear x:Name="YearSeting" SelectedDateTime="{Binding Model.DateTimeSet}" Width="40" Margin="5,0,0,0"></control:AyDateBoxYear>
+            <control:AyDateBoxYear x:Name="YearSeting" Text="{Binding Model.YearSet,Mode=TwoWay}" IsIntegerBox="True"  Width="40" Margin="5,0,0,0"></control:AyDateBoxYear>
             <Label x:Name="YearLab" Content="年"/>
             <control:AyDateBoxMonth x:Name="MonthSeting" Text="{Binding Model.MonthSet}" Width="40" Margin="5,0,0,0"/>
             <Label x:Name="Monlab" Content="月"/>

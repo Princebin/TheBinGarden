@@ -157,3 +157,5 @@ C:\Users\Princebin5\source\repos\TomatoClock\TomatoClock\obj\Debug\Views\Alarm\A
 C:\Users\Princebin5\source\repos\TomatoClock\TomatoClock\obj\Debug\Views\Alarm\AlarmSeting.g.cs
 C:\Users\Princebin5\source\repos\TomatoClock\TomatoClock\obj\Debug\Views\Alarm\AlarmSeting.baml
 C:\Users\Princebin5\source\repos\TomatoClock\TomatoClock\obj\Debug\TomatoClock.csprojAssemblyReference.cache
+E:\GitHub\TheBinGarden\TomatoClock\TomatoClock\obj\Debug\Views\Alarm\AlarmSeting.g.cs
+E:\GitHub\TheBinGarden\TomatoClock\TomatoClock\obj\Debug\Views\Alarm\AlarmSeting.baml

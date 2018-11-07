@@ -1,0 +1,11 @@
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\bin\Debug\ServiceB.dll
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\bin\Debug\ServiceB.pdb
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\bin\Debug\System.Web.Http.dll
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\bin\Debug\System.Web.Http.xml
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\obj\Debug\ServiceB.csproj.CoreCompileInputs.cache
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\obj\Debug\ServiceB.csproj.CopyComplete
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\obj\Debug\ServiceB.dll
+C:\Users\JustSafe\source\repos\InjectRoute\ServiceB\obj\Debug\ServiceB.pdb
